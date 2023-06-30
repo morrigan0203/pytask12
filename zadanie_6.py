@@ -17,7 +17,7 @@ class Positive:
         raise AttributeError(f'Свойство "{self.param_name}" нельзя удалять')
     
     def validate(self, value):
-        if not (type(value) == int or float):
+        if not (type(value) == int or type(value) == float):
             raise TypeError(f'Значение {value} должно быть числом')
         if value < 0:
             raise ValueError(f'Значение {value} должно быть больше 0')
